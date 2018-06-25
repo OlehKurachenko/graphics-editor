@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/icons/addCircle.png</file>
+        <file>resources/icons/addLine.png</file>
+        <file>resources/icons/addRect.png</file>
+        <file>resources/icons/exit.png</file>
+        <file>resources/icons/help.png</file>
+        <file>resources/icons/save.png</file>
+        <file>resources/icons/delete.png</file>
+        <file>resources/icons/selection.png</file>
+    </qresource>
+</RCC>
