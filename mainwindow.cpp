@@ -3,7 +3,6 @@
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent), scene(new MyGraphicsScene(0,0,600, 600)), view(new QGraphicsView){
 
-    //helpBrowser("../HW4_GraphicsEditor/resources/html", "index.html");
     scene->currentDrawingState = scene->DrawingState::Default;
 
     view->setScene(scene);
