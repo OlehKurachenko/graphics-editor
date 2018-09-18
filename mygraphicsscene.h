@@ -9,6 +9,8 @@
 #include <QGraphicsLineItem>
 #include <QLineF>
 
+#include <iostream>
+
 class MyGraphicsScene: public QGraphicsScene{
     Q_OBJECT
 public:
@@ -22,6 +24,18 @@ public:
     void mouseReleaseEvent(QGraphicsSceneMouseEvent  *mouseEvent) Q_DECL_OVERRIDE;
 
 private:
+
+    void drawBackground(QPainter *painter, const QRectF &rect) override {
+        Q_UNUSED(rect);
+
+        std::cout << "Drawing background!" << std::endl;
+
+        painter->setPen(Qt::NoPen);
+        painter->setBrush(QBrush(Qt::black, Qt::SolidPattern));
+        painter->setOpacity(0.7);
+        painter->drawRect(0, 0, 100, 100);
+    }
+
     QGraphicsItem* tempItem;
     QList<QGraphicsItem *> selectedItems;
 
